@@ -1,0 +1,5 @@
+librosa
+
+uvicorn[standard]
+fastapi
+python-multipart
