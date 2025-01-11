@@ -21,7 +21,7 @@ The application is deployed using the following AWS components:
     S3 (Simple Storage Service): For storing static files and application backups.
     CloudWatch: For monitoring and logging.
 
-![AWS Deployment Diagram](https://www.linkedin.com/pulse/scalability-high-availability-why-i-am-fan-aws-elastic-ehab-anshad/)
+!(https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/1619870995631.png)
 
 
 
@@ -49,7 +49,7 @@ This step includes all common steps before doing deployment on all deployments (
 
 VPC (Virtual Private Cloud) is a service offered by AWS that allows you to create a logically isolated network within the AWS cloud. It gives you complete control over your virtual networking environment, including selecting your own IP address ranges, creating subnets, configuring route tables, and setting up network gateways.
 
-![AWS Deployment Diagram](src_img\Screenshot (55).png)
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(55).png)
 
 
 
@@ -59,6 +59,7 @@ VPC (Virtual Private Cloud) is a service offered by AWS that allows you to creat
 A Security Group in AWS is a virtual firewall that controls inbound and outbound traffic for your resources, such as EC2 instances, RDS databases, and other services. It acts as the first layer of defense for your resources by allowing or denying traffic based on defined rules.
 
 Types of Rules in a Security Group
+
     - Inbound Rules:
         Control traffic that is allowed to reach your instance.
         Example:
