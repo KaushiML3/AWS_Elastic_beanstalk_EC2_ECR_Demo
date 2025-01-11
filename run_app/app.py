@@ -22,8 +22,6 @@ app=FastAPI(title="Fritzband",
     version="0.115.4")
 
 
-
-
 # Allow all origins (replace * with specific origins if needed)
 app.add_middleware(
     CORSMiddleware,
