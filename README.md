@@ -81,7 +81,7 @@ Database Server:
 Private Backend Instances:
     Only allow traffic from the load balancer's security group.
 
-![AWS Deployment Diagram](src_img\Screenshot (54).png)
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(54).png)
 
 
 1. Allow full SSH access for developers
