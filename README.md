@@ -21,7 +21,7 @@ The application is deployed using the following AWS components:
     S3 (Simple Storage Service): For storing static files and application backups.
     CloudWatch: For monitoring and logging.
 
-!(https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/1619870995631.png)
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/1619870995631.png)
 
 
 
