@@ -20,12 +20,13 @@ The application is deployed using the following AWS components:
     RDS (Relational Database Service): For database management.(Not include this repository)
     S3 (Simple Storage Service): For storing static files and application backups.
     CloudWatch: For monitoring and logging.
-
+    
+![Refference](https://www.linkedin.com/pulse/scalability-high-availability-why-i-am-fan-aws-elastic-ehab-anshad/)
 ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/1619870995631.png)
 
 
 
-## AWS Deployment method
+## AWS Deployment method 
 
 1. Elastic Beanstalk
 2. EC2 
