@@ -114,14 +114,14 @@ When you launch an EC2 instance, AWS uses the public key to encrypt the login cr
 
 An AWS IAM Role is a tool within Amazon Web Services (AWS) Identity and Access Management (IAM) that allows entities (such as users, applications, or services) to assume temporary security credentials to interact with AWS resources. IAM roles are often used to delegate permissions without needing long-term credentials
 
-step 1:
+- step 1:
     create EC2 role
     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(63).png)
 
-step 2:
+- step 2:
     add permission to "AWSElasticBeanstalkWebTier","AWSElasticBeanstalkWorkerTier","AWSElasticBeanstalkMulticontainerDocker" policy.
 
-step 3:
+- step 3:
     Create Role name "EC2_instances_role"
      ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(64).png)
 
