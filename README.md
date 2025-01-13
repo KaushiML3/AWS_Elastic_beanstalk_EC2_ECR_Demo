@@ -151,7 +151,20 @@ step 4:
 
 
 
+**add the additional steps for CD**
 
+step 1:
+    Go to aws codepipeline
+    create new pipelin and select build new templete
+
+step 2:
+    Create pileline name. othors are default
+
+step 3:
+    Source provider github.
+
+step 4:
+    Build provider skip
 
 
 ## 2. EC2
