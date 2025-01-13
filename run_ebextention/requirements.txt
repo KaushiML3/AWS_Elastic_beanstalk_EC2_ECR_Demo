@@ -1,6 +1,0 @@
-librosa
-
-uvicorn[standard]
-gunicorn
-fastapi
-python-multipart
