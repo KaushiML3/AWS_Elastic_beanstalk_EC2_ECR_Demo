@@ -135,37 +135,37 @@ An AWS IAM Role is a tool within Amazon Web Services (AWS) Identity and Access M
 
 **Amazon Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.**
 
-step 1:
+- step 1:
     Go to Amazon Elastic Beanstalk
     Create application with environment
     ![AWS Deployment Diagram]()
 
-step 2:
+- step 2:
     use default Existing service roles.
     add previouse created EC2 key pair.(Common steps 4)
     add previouse created EC2 instance profile.(Common steps 5)
      ![AWS Deployment Diagram]()
 
 
-step 3:
+- step 3:
     use default VPC or created vpc(Common steps 2)
      ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(65).png)
 
-step 4:
+- step 4:
     add the previouse created security group.(Common steps 3)
     use t3.micro or t2.mico
     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(66).png)
     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(67).png)
     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(68).png)
 
-step 5:
+- step 5:
     set the helth reporting basic
     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(69).png)
 
-step 6:
+- step 6:
     Create the environment.
 
-finally :
+- finally :
     Go to domain.(you can see the host application)
     Need to change the application resource code. Click the upload and deploy. set the "aws_flask.zip","run_app.zip" or "run_main.zip" ,and deploy.
     
@@ -178,38 +178,39 @@ finally :
 
 **add the additional steps for CD**
 
-step 1:
+- step 1:
     Go to aws codepipeline
     create new pipelin and select build new templete
     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(72).png)
 
-step 2:
+- step 2:
     Create pileline name. othors are default
      ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(73).png)
 
-step 3:
+- step 3:
     Source provider github.
      ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(74).png)
 
-step 4:
+- step 4:
     Build provider skip
      
-finally:
+- finally:
     Source and Deploy succuss . you can go to aws Elastic Beanstalk
+   ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(75).png)
 
 ## 2. EC2
 
 ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(56).png)
 
-step 1:
+_ step 1:
     create the EC2 instance
 ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(60).png)
 
 
-step 2:
+- step 2:
     connected the EC2 instance
 
-step 3:
+- step 3:
 
     sudo su #access root 
     yum 
