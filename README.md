@@ -40,6 +40,7 @@ This step includes all common steps before doing deployment on all deployments (
 2. Create public VPC
 3. Create security group for allow ssh and http/https
 4. Create EC2 key pair
+5. Iam role
 
 ### 1. Create route53 web address
 
@@ -85,11 +86,15 @@ Private Backend Instances:
 
 
 1. Allow full SSH access for developers
-![AWS Deployment Diagram](src_img\Screenshot (54).png)
+
+- use your default or previous created vpc
+![AWS Deployment Diagram](src_img\Screenshot (57).png)
 
 
 
 2. Allow inbound internet access
+
+- use your default or previous created vpc
 ![AWS Deployment Diagram](src_img\Screenshot (54).png)
 
 
@@ -103,7 +108,62 @@ An EC2 Key Pair in AWS is a set of security credentials used to securely connect
 
 When you launch an EC2 instance, AWS uses the public key to encrypt the login credentials (e.g., a password). You use the private key to decrypt this information and securely log in to the instance.
 
+![AWS Deployment Diagram](src_img\Screenshot (54).png)
+
+### 5. Iam role
+
+An AWS IAM Role is a tool within Amazon Web Services (AWS) Identity and Access Management (IAM) that allows entities (such as users, applications, or services) to assume temporary security credentials to interact with AWS resources. IAM roles are often used to delegate permissions without needing long-term credentials
+
+step 1:
+    create EC2 role
+
+step 2:
+    add permission to "AWSElasticBeanstalkWebTier","AWSElasticBeanstalkWorkerTier","AWSElasticBeanstalkMulticontainerDocker" policy.
+
+step 3:
+    Create Role name "EC2_instances_role"
+
+
+
+
+
+
 
 ## 1. Elastic Beanstalk
 
+**Amazon Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.**
+
+step 1:
+    Go to Amazon Elastic Beanstalk
+    Create application with environment
+
+step 2:
+    use default Existing service roles.
+    add previouse created EC2 key pair.(Common steps 4)
+    add previouse created EC2 instance profile.(Common steps 5)
+
+step 3:
+    use default VPC or created vpc(Common steps 2)
+
+step 4:
+    add the previouse created security group.(Common steps 3)
+    use t3.micro or t2.mico
+
+
+
+
+
+
 ## 2. EC2
+
+step 1:
+    create the EC2 instance
+
+
+step 2:
+    connected the EC2 instance
+
+step 3:
+
+    sudo su #access root 
+    yum 
