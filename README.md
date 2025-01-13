@@ -21,7 +21,7 @@ The application is deployed using the following AWS components:
     S3 (Simple Storage Service): For storing static files and application backups.
     CloudWatch: For monitoring and logging.
 
-![AWS Deployment Diagram](https://www.linkedin.com/pulse/scalability-high-availability-why-i-am-fan-aws-elastic-ehab-anshad/)
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/1619870995631.png)
 
 
 
@@ -50,7 +50,7 @@ This step includes all common steps before doing deployment on all deployments (
 
 VPC (Virtual Private Cloud) is a service offered by AWS that allows you to create a logically isolated network within the AWS cloud. It gives you complete control over your virtual networking environment, including selecting your own IP address ranges, creating subnets, configuring route tables, and setting up network gateways.
 
-![AWS Deployment Diagram](src_img\Screenshot (55).png)
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(55).png)
 
 
 
@@ -82,20 +82,20 @@ Database Server:
 Private Backend Instances:
     Only allow traffic from the load balancer's security group.
 
-![AWS Deployment Diagram](src_img\Screenshot (54).png)
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(54).png)
 
 
 1. Allow full SSH access for developers
 
 - use your default or previous created vpc
-![AWS Deployment Diagram](src_img\Screenshot (57).png)
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(57).png)
 
 
 
 2. Allow inbound internet access
 
 - use your default or previous created vpc
-![AWS Deployment Diagram](src_img\Screenshot (54).png)
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(58).png)
 
 
 
@@ -108,7 +108,7 @@ An EC2 Key Pair in AWS is a set of security credentials used to securely connect
 
 When you launch an EC2 instance, AWS uses the public key to encrypt the login credentials (e.g., a password). You use the private key to decrypt this information and securely log in to the instance.
 
-![AWS Deployment Diagram](src_img\Screenshot (54).png)
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(59).png)
 
 ### 5. Iam role
 
@@ -116,12 +116,14 @@ An AWS IAM Role is a tool within Amazon Web Services (AWS) Identity and Access M
 
 step 1:
     create EC2 role
+    ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(63).png)
 
 step 2:
     add permission to "AWSElasticBeanstalkWebTier","AWSElasticBeanstalkWorkerTier","AWSElasticBeanstalkMulticontainerDocker" policy.
 
 step 3:
     Create Role name "EC2_instances_role"
+     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(64).png)
 
 
 
@@ -136,41 +138,72 @@ step 3:
 step 1:
     Go to Amazon Elastic Beanstalk
     Create application with environment
+    ![AWS Deployment Diagram]()
 
 step 2:
     use default Existing service roles.
     add previouse created EC2 key pair.(Common steps 4)
     add previouse created EC2 instance profile.(Common steps 5)
+     ![AWS Deployment Diagram]()
+
 
 step 3:
     use default VPC or created vpc(Common steps 2)
+     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(65).png)
 
 step 4:
     add the previouse created security group.(Common steps 3)
     use t3.micro or t2.mico
+    ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(66).png)
+    ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(67).png)
+    ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(68).png)
+
+step 5:
+    set the helth reporting basic
+    ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(69).png)
+
+step 6:
+    Create the environment.
+
+finally :
+    Go to domain.(you can see the host application)
+    Need to change the application resource code. Click the upload and deploy. set the "aws_flask.zip","run_app.zip" or "run_main.zip" ,and deploy.
+    
+    ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(71).png)
 
 
+
+
+   
 
 **add the additional steps for CD**
 
 step 1:
     Go to aws codepipeline
     create new pipelin and select build new templete
+    ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(72).png)
 
 step 2:
     Create pileline name. othors are default
+     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(73).png)
 
 step 3:
     Source provider github.
+     ![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(74).png)
 
 step 4:
     Build provider skip
-
+     
+finally:
+    Source and Deploy succuss . you can go to aws Elastic Beanstalk
 
 ## 2. EC2
 
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(56).png)
+
 step 1:
     create the EC2 instance
+![AWS Deployment Diagram](https://github.com/KaushiML3/AWS_CD_test/blob/main/src_img/Screenshot%20(60).png)
 
 
 step 2:
