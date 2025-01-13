@@ -3,6 +3,7 @@
 This repository contains the source code and deployment configuration for simple python app, a web-based platform for project management. The application is hosted on AWS, leveraging the power of cloud infrastructure for scalability, reliability, and performance.
 
 
+
 ## Features
 
 - **AWS Deployment**: The application is deployed using AWS services, including EC2, S3, RDS, and others as applicable.
